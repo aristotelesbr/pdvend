@@ -9,4 +9,4 @@ AllCops:
 
 Metrics/LineLength:
   # Change the default 80 chars limit value
-  Max: 80
+  Max: 100
