@@ -1,11 +1,8 @@
 run:
 	@docker-compose up
 
-kill:
-	@docker-compose kill
-
 test:
-	@docker-compose run --rm web bundle exec rspec $(ARGS)
+	@docker-compose run --rm web rspec $(ARGS)
 
 install:
 	@docker-compose run --rm web bundle install
@@ -29,7 +26,7 @@ seed:
 	@docker-compose run --rm web rails db:seed
 
 setup:
-	@docker-compose run --rm web rake db:drop db:create
+	@docker-compose run --rm web rails db:drop db:create db:migrate db:seed
 
 console:
 	@docker-compose run --rm web bundler exec rails console
