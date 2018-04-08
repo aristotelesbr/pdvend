@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20180406192918) do
     t.string   "description",    limit: 65535
     t.decimal  "product_value",                precision: 12, scale: 2
     t.float    "height",                                                null: false
-    t.decimal  "weight",                       precision: 12, scale: 2
+    t.float    "weight",                                                null: false
     t.float    "width",                                                 null: false
     t.float    "product_length",                                        null: false
     t.datetime "created_at",                                            null: false

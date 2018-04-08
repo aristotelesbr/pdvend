@@ -25,8 +25,8 @@ RSpec.describe 'Product API', type: :request do
         attributes_for(
           :product,
           id: product.id,
-          zip_code_origin: '123',
-          zip_code_dinatation: '123'
+          zip_code_origin: '85253100',
+          zip_code_dinatation: '64020350'
         )
       end
 
@@ -36,7 +36,7 @@ RSpec.describe 'Product API', type: :request do
     end
 
     context 'when invalid request' do
-      let!(:search_params) { attributes_for(:product, zip_code_origin: '123') }
+      let!(:search_params) { attributes_for(:product, zip_code_origin: '') }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -60,13 +60,13 @@ RSpec.describe 'Product API', type: :request do
         attributes_for(
           :product,
           id: product.id,
-          zip_code_origin: '123',
-          zip_code_dinatation: '123'
+          zip_code_origin: '85253100',
+          zip_code_dinatation: '64020350'
         )
       end
 
       it 'return json with product attribute id' do
-        expect(json_body[:params][:id]).to eq(product.id)
+        expect(json_body[1][:product][:id]).to eq(product.id)
       end
     end
 
@@ -75,8 +75,8 @@ RSpec.describe 'Product API', type: :request do
         attributes_for(
           :product,
           id: 10_000,
-          zip_code_origin: '123',
-          zip_code_dinatation: '123'
+          zip_code_origin: '85253100',
+          zip_code_dinatation: '64020350'
         )
       end
 

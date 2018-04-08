@@ -17,8 +17,8 @@ module Api
       def search
         product_with_zip_code = ParamsValidator.new(params[:search])
         if product_with_zip_code.valid_params
-          product_with_calc = { valor: '29.9' }
-          render json: product_with_calc
+          product_with_shipping = Searchable.new(params[:search]).product_with_shipping
+          render json: product_with_shipping
         else
           render json: product_with_zip_code.errors, status: :unprocessable_entity
         end

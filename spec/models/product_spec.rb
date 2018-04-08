@@ -9,7 +9,7 @@
 #  description    :string(65535)
 #  product_value  :decimal(12, 2)
 #  height         :float            not null
-#  weight         :decimal(12, 2)
+#  weight         :float            not null
 #  width          :float            not null
 #  product_length :float            not null
 #  created_at     :datetime         not null

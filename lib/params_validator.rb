@@ -13,7 +13,7 @@ class ParamsValidator
 
   def valid_params
     return false unless valid_object
-    :ok
+    true
   end
 
   def valid_object
