@@ -23,6 +23,8 @@ gem 'puma', '~> 3.0'
 gem 'rack-cors'
 # ActiveModel::Serializers allows you to generate your JSON in an object-oriented and convention-driven manner.
 gem 'active_model_serializers', '~> 0.10.0'
+# Calculo de frete utilizando o Web Service dos Correios (http://www.correios.com.br/webservices). Os servicos de frete suportados sao PAC, SEDEX, SEDEX a Cobrar, SEDEX 10, SEDEX Hoje e e-SEDEX.
+gem 'correios-frete', '~> 1.13'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
