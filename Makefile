@@ -36,3 +36,6 @@ fix:
 
 serialize:
 	@docker-compose run --rm web rails g serializer $(ARGS)
+
+prepare:
+	@docker-compose run --rm web rails db:test:prepare
