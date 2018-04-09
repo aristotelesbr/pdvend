@@ -1,0 +1,11 @@
+anguage: ruby
+rvm:
+  - 2.4.0
+before_script:
+  - bundle exec rake db:create db:migrate db:seed
+script:
+  - bundle exec rake ci:tests
+services:
+  - postgresql
+notifications:
+  email: false
