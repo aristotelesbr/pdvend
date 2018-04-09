@@ -2,6 +2,8 @@
 
 Application of test for work
 
+<img src="https://www.travis-ci.org/aristotelesbr2014/pdvend.svg?branch=master">
+
 * Set subdomain(`127.0.0.1 api.pdvend.test`) in local machine!
 
 `macOS`: `/private/etc/hosts`
