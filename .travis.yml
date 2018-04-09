@@ -2,8 +2,9 @@ anguage: ruby
 rvm:
   - 2.4.0
 before_script:
-  - bundle exec rails db:create db:migrate db:seed
+  - cp config/database.travis.yml config/database.yml
 script:
+  - bundle exec rails db:create db:migrate db:seed
   - bundle exec rake ci:tests
 services:
   - postgresql
