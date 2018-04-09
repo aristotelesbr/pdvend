@@ -26,4 +26,24 @@ RSpec.describe Product, type: :model do
   it { is_expected.to validate_presence_of(:weight) }
   it { is_expected.to validate_presence_of(:width) }
   it { is_expected.to validate_presence_of(:product_length) }
+
+  describe '#height_greater_width' do
+    context 'when valid data' do
+      let(:product) { build(:product) }
+      it 'save product' do
+        expect(product.save).to be_truthy
+      end
+    end
+
+    context 'when invalid data' do
+      let(:product) { build(:product, height: 10, product_length: 9) }
+      it 'dont save product' do
+        expect(product.save).to be_falsey
+      end
+      it 'returns errors key' do
+        product.save
+        expect(product.errors.messages).to include(:height)
+      end
+    end
+  end
 end

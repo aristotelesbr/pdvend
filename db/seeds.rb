@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-10.times do
+5.times do
   Product.create(
     name: Faker::Name.name,
     description: Faker::Lorem.sentence(3),
