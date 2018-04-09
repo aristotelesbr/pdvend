@@ -66,7 +66,7 @@ RSpec.describe 'Product API', type: :request do
       end
 
       it 'return json with product attribute id' do
-        expect(json_body[1][:product][:id]).to eq(product.id)
+        expect(json_body[0][:product][:id]).to eq(product.id)
       end
     end
 

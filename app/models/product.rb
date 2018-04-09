@@ -22,7 +22,6 @@ class Product < ApplicationRecord
             :width, :product_length, presence: true
 
   validate :height_greater_width, on: [:create]
-  validate :valid_weight, on: [:create]
 
   private
 

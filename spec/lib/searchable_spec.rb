@@ -23,11 +23,11 @@ RSpec.describe Searchable, type: :model do
       end
 
       it 'returns key with pac and sedex object' do
-        expect(@request.first).to include(:pac).and include(:sedex)
+        expect(@request[1]).to include(:pac).and include(:sedex)
       end
 
       it 'returns object with shipping value' do
-        expect(@request.first[:pac].valor).to be_a_kind_of(Float)
+        expect(@request[1][:pac].valor).to be_a_kind_of(Float)
       end
     end
   end
