@@ -80,8 +80,6 @@ height         :float            not null
 weight         :float            not null
 width          :float            not null
 product_length :float            not null
-created_at     :datetime         not null
-updated_at     :datetime         not null
 ```
 
 Postman example:
